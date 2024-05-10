@@ -1,0 +1,216 @@
+.banner {
+    background-color: #000;
+    position: relative;
+    &_swiper {
+        &_item {
+            width: 100%;
+            padding-bottom: 50%;
+            position: relative;
+            >img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+                opacity: 0.7;
+            }
+        }
+        &_text {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 7%;
+            transform: translateY(calc(-50% + 30px));
+            width: 86%;
+            h2 {
+                font-size: 68px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 32px;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+        .swiper-pagination {
+            bottom: 6%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-bullet {
+                width: 99px;
+                height: 3px;
+                margin: 0 7px;
+                opacity: 1;
+                background-color: #fff;
+                border-radius: 0;
+                transition: $transition-common;
+                &-active {
+                    background-color: $primary-1;
+                }
+            }
+        }
+    }
+    .search {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        // transform: translateY(calc(-50% - 10px));
+        transform: translateY(-50%);
+        z-index: 5;
+    }
+    @media screen and (max-width: 1600px) {
+        &_swiper {
+            &_text {
+                left: 5%;
+                width: 90%;
+                h2 {
+                    font-size: 54px;
+                }
+                h3 {
+                    font-size: 25px;
+                }
+            }
+        }
+        .search {
+            top: inherit;
+            transform: none;
+            bottom: 8vw;
+        }
+    }
+    @media screen and (max-width: 1299px) {
+        &_swiper {
+            &_text {
+                left: 3%;
+                width: 94%;
+                h2 {
+                    font-size: 44px;
+                }
+                h3 {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &_swiper {
+            &_text {
+                h2 {
+                    font-size: 38px;
+                }
+                h3 {
+                    font-size: 16px;
+                }
+            }
+            .swiper-pagination {
+                justify-content: flex-start;
+                padding-left: 3%;
+            }
+        }
+        .search {
+            bottom: 5vw;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_swiper {
+            &_item {
+                padding-bottom: 150%;
+            }
+            .swiper-pagination {
+                justify-content: center;
+            }
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &_swiper {
+            &_text {
+                h2 {
+                    font-size: 32px;
+                }
+                h3 {
+                    font-size: 14px;
+                }
+            }
+            .swiper-pagination {
+                &-bullet {
+                    width: 70px;
+                }
+            }
+        }
+    }
+}
+
+.mainNav {
+    padding: 55px 0;
+    background-image: url(../img/nav-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .row {
+        margin: 0;
+        >div {
+            padding: 0;
+        }
+    }
+    &_item {
+        padding-left: 30px;
+        display: block;
+        padding: 20px 30px;
+        color: #fff;
+        // border-left: 3px solid #fff;
+        position: relative;
+        transition: $transition-common;
+        z-index: 0;
+        span {
+            display: block;
+            transition: $transition-common;
+        }
+        &_num {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+        &_text {
+            font-size: 28px;
+            font-weight: 500;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 100%;
+            background-color: #fff;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: $transition-common;
+        }
+        &:hover {
+            color: $primary-1;
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 1399px) {
+        >.container {
+            max-width: inherit;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 45px 0 15px;
+        &_item {
+            margin-bottom: 30px;
+            padding: 15px;
+            &_num {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            &_text {
+                font-size: 24px;
+            }
+        }
+    }
+}
