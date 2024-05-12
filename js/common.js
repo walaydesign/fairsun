@@ -1,10 +1,4 @@
 $(".header_menu").click(function(){
-    if(!$(".header").hasClass("light")) {
-        $(".header").addClass("light");
-    }
-    if($(this).hasClass("active")) {
-        $(".header").removeClass("light");
-    }
     $(this).toggleClass("active");
     $(".header_nav").toggleClass("active");
 })
@@ -31,18 +25,10 @@ function headerNavFirstLink(){
         $(".header_nav_firstLink").attr("href",link);
     }
 }
-headerNavFirstLink()
 
 
-$(window).on("resize scroll",function(){
-    headerNavFirstLink();
 
-    if($(window).scrollTop()>0){
-        $(".header").addClass("light");
-    }else {
-        $(".header").removeClass("light");
-    }
-})
+
 
 $(".header_search").click(function(){
     $(".search-wrap").fadeIn(300);

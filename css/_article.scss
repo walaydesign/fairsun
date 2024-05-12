@@ -1,0 +1,97 @@
+.article {
+    &-list {
+        .row {
+            margin-left: -25px;
+            margin-right: -25px;
+            >div {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+        &_item {
+            display: block;
+            margin-bottom: 85px;
+            border-radius: 30px 0 30px 30px;
+            padding-bottom: 25px;
+            transition: $transition-common;
+            &:hover {
+                background-color: $primary-1;
+                .article-list {
+                    &_more {
+                        opacity: 1;
+                    }
+                    &_date, &_title, &_content, &_tag {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &_pic {
+            position: relative;
+            width: 100%;
+            padding-bottom: 70%;
+            border-radius: 30px 0 30px 0;
+            overflow: hidden;
+            >img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
+        &_more {
+            position: absolute;
+            color: $gray-2;
+            font-size: 16px;
+            right: 30px;
+            bottom: 0;
+            transition: $transition-common;
+            opacity: 0;
+            background-color: #fff;
+            padding: 8px 12px;
+            border-radius: 10px 0 0 0;
+        }
+        &_text {
+            padding: 0 15px;
+            margin-top: 25px;
+            border-left: 2px solid $primary-1;
+            transition: $transition-common;
+        }
+        &_date {
+            font-size: 18px;
+            color: $gray-2;
+            margin-bottom: 15px;
+            transition: $transition-common;
+        }
+        &_title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: $transition-common;
+        }
+        &_content {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            transition: $transition-common;
+        }
+        &_tag {
+            font-size: 16px;
+            color: #003399;
+            transition: $transition-common;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &-list {
+            &_item {
+                margin-bottom: 50px;
+            }
+
+        }
+    }
+}

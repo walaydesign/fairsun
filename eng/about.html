@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼎傑企業</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header light d-flex align-items-center justify-content-between">
+        <div class="header_left d-flex align-items-center">
+            <a class="header_logo d-flex align-items-center" href="./index.html">
+                <img class="header_logo_round d-sm-block d-none" src="../img/logo.png" alt="">
+                <div class="header_logo_gear">
+                    <img class="header_logo_gear_white" src="../img/logo-2.png" alt="">
+                    <img class="header_logo_gear_dark" src="../img/logo-3.png" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="header_right d-flex align-items-center">
+            <nav class="header_nav d-lg-flex align-items-center">
+                <ul class="header_nav_first d-lg-flex">
+                    <li class="drop">
+                        <a class="header_nav_firstLink" data-link="./products.html">PRODUCTS</a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li class="d-lg-none"><a href="">ALL</a></li>
+                                <li><a href="">PASSENGER CAR</a></li>
+                                <li><a href="">TRUCK</a></li>
+                                <li><a href="">SPETIALTY APPLICATION</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="drop">
+                        <a>ARTICLE</a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li><a href="">NEWS</a></li>
+                                <li><a href="">BLOG</a></li>
+                                <li><a href="">Q & A</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">E-CATALOG</a></li>
+                    <li><a href="">ALIBABA</a></li>
+                    <li class="drop active">
+                        <a>COMPANY</a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">HISTORY</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">CONTACT</a></li>
+                    <li class="drop d-lg-none">
+                        <a>
+                            <div class="header_lang_active d-flex align-items-center">
+                                <img src="../img/globe.png" alt="">
+                                <span>EN</span>
+                            </div>
+                        </a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li><a href="" class="active">EN</a></li>
+                                <li><a href="">繁體中文</a></li>
+                                <li><a href="">簡體中文</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header_search d-lg-none">
+                <img class="header_search_white" src="../img/search-2.png" alt="">
+                <img class="header_search_dark" src="../img/search-2-dark.png" alt="">
+            </div>
+            <div class="header_lang d-lg-flex d-none">
+                <div class="header_lang_active d-flex align-items-center">
+                    <img class="header_lang_white" src="../img/globe.png" alt="">
+                    <img class="header_lang_dark" src="../img/globe-dark.png" alt="">
+                </div>
+                <div class="header_lang_list">
+                    <ul>
+                        <li><a href="" class="active">EN</a></li>
+                        <li><a href="">繁體中文</a></li>
+                        <li><a href="">簡體中文</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="./inquiry.html" class="header_inquiry">
+                <img class="header_inquiry_white" src="../img/cart.png" alt="">
+                <img class="header_inquiry_dark" src="../img/cart-dark.png" alt="">
+                <div class="header_inquiry_num">99</div>
+            </a>
+            <div class="header_menu d-lg-none d-flex align-items-center justify-content-center">
+                <div class="header_menu_inner">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="search-wrap search-top">
+        <div class="search-bg"></div>
+        <div class="search">
+            <div class="search_title d-flex align-items-center">
+                <img class="search_title_icon icon-red" src="../img/search.png" alt="">
+                <img class="search_title_icon icon-white" src="../img/search-white.png" alt="">
+                <h4>SEARCH FILTER</h4>
+            </div>
+            <div class="search_input">
+                <label for="">TYPE</label>
+                <select name="" id="">
+                    <option value="">Type</option>
+                </select>
+            </div>
+            <div class="search_input">
+                <label for="">PARTS</label>
+                <select name="" id="">
+                    <option value="">Parts</option>
+                </select>
+            </div>
+            <div class="search_input">
+                <label for="">MAKE</label>
+                <select name="" id="">
+                    <option value="">Make</option>
+                </select>
+            </div>
+            <div class="search_input">
+                <label for="">OEM Number</label>
+                <input type="text" placeholder="OEM Number">
+            </div>
+            <button class="d-flex align-items-center justify-content-center">
+                <span>Search</span>
+                <img class="search_btn" src="../img/search-2.png" alt="">
+            </button>
+        </div>
+    </div>
+
+    <main class="pt-inner innerPage-wrap">
+        <div class="innerPage">
+            <div class="container">
+                <h1 class="page-title">About</h1>
+            </div>
+            <div class="container">
+                <div class="about_lowprice">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h2>
+                                low-price, <br>high-quality 
+                            </h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <img class="about_lowprice_pic" src="../img/certificate.png" alt="">
+                            <p class="about_text">
+                                Fair Sun Industrial Co. Ltd. was established in 1980 specialized in Automotive Switches, Door Lock Actuators, Solenoids, Relays, Clock Springs, Sensors, and other electrical auto parts to cover many different car brands. For over 30 years, Fair Sun has been focused on applying the best production technologies to maintain our customers satisfaction with the highest quality standards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about_bigpic">
+                <div class="about_bigpic_main">
+                    <img class="about_bigpic_top" src="../img/about-1.png" alt="">
+                    <img class="about_bigpic_bottom" src="../img/about-2.png" alt="">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="about_text">With over 30 years manufacturing experience and IAFT16949 certification, Fair Sun has became Tier 1 supplier to OE/OES customers in North America and Europe from 2004.</p><br>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="about_text">
+                                During 30 years we have been always improving our technical procedures from our R&D department and also the skills to obtain the best from the most advanced equipments acquired by Fair Sun. From the initial study of the products drawing to the final production and assembly we go through all the process improvement such us Computer Assisted Design improvement, mold finishing, product durability testing, etc… Different lab testing procedures take place continuously in the different product stages creating the teamwork essential for the success of each final products. Also the direct cooperation between Taiwan Fair Sun factory and Shanghai Fairsun factory allow us to produce the same high quality standards in China as the ones we have been providing to our customers for the last 30 years but with even more competitive prices.<br>
+                                <br>
+                                Shanghai Fairsun Electronic Co. Ltd., was established in 1999 as the Fairsun Industrial Taiwan Co. Ltd. subsidiary in China specialized in the auto parts production for worldwide export.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about_organization">
+                <div class="container">
+                    <h2 class="page-title">ORGANIZATION</h2>
+                    <h3 class="page-subtitle">TAYLOR HONG – CHAIRMAN OF THE BOARD</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_organization_item">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="about_organization_num">01</span>
+                                    <div class="about_organization_divide">/</div>
+                                    <span class="about_organization_title">SALES DEPT</span>
+                                </div>
+                                <ul class="about_organization_place d-flex align-items-center">
+                                    <li>SHANGHAI</li>
+                                    <li>TAIPEI</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_organization_item">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="about_organization_num">02</span>
+                                    <div class="about_organization_divide">/</div>
+                                    <span class="about_organization_title">R&D DEPT</span>
+                                </div>
+                                <ul class="about_organization_place d-flex align-items-center">
+                                    <li>SHANGHAI</li>
+                                    <li>TAIPEI</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_organization_item">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="about_organization_num">03</span>
+                                    <div class="about_organization_divide">/</div>
+                                    <span class="about_organization_title">PRODUTION</span>
+                                </div>
+                                <ul class="about_organization_place d-flex align-items-center">
+                                    <li>SHANGHAI</li>
+                                    <li>TAIPEI</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_organization_item">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="about_organization_num">04</span>
+                                    <div class="about_organization_divide">/</div>
+                                    <span class="about_organization_title">QA DEPT</span>
+                                </div>
+                                <ul class="about_organization_place d-flex align-items-center">
+                                    <li>SHANGHAI</li>
+                                    <li>HSINCHU</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_organization_item">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="about_organization_num">05</span>
+                                    <div class="about_organization_divide">/</div>
+                                    <span class="about_organization_title">ACCOUNTING</span>
+                                </div>
+                                <ul class="about_organization_place d-flex align-items-center">
+                                    <li>SHANGHAI</li>
+                                    <li>HSINCHU</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about_level">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 order-lg-1 order-2">
+                            <img class="about_level_pic" src="../img/about-3.png" alt="">
+                        </div>
+                        <div class="col-lg-6 order-lg-2 order-1">
+                            <h2 class="page-title">3-LEVEL QUALITY POLICY </h2>
+                            <p class="about_text">
+                                Our goal is to supply the highest quality products, not only emphasizing and improving production processes but also with the best techniques to use the most updated QC systems. All our products are TQC (Total Quality Control). We are not satisfied with the actual business situation and steady growth for the last 30 years, we are already developing new products and continuously improving our processes to continue winning market share and satisfying customers all over the world.<br>
+                                <br>
+                                Our main products are Automotive Switches, Door Lock Actuators, Solenoids, Relays, Clock Springs, Sensors, etc… Main markets are North America, Europe and Middle East other markets we are currently supplying are South America, Asia, Oceania and Africa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="breadcrumb-common">
+                <ul class="container d-flex align-items-center">
+                    <li><a href="">Home</a></li>
+                    <li>About</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_logo d-flex align-items-center justify-content-center">
+                <img class="footer_logo_round" src="../img/logo.png" alt="">
+                <img class="footer_logo_gear" src="../img/logo-3.png" alt="">
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title"><a href="">PRODUCTS</a></h3>
+                    <ul>
+                        <li><a href="">PASSENGER CAR</a></li>
+                        <li><a href="">TRUCK</a></li>
+                        <li><a href="">SPECIALITY APPLICATION</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title">ARTICLE</h3>
+                    <ul>
+                        <li><a href="">NEWS</a></li>
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="">Q & A</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title"><a href="">ECATALOG</a></h3>
+                    <h3 class="footer_title"><a href="">ALIBABA</a></h3>
+                    <h3 class="footer_title">COMPANY</h3>
+                    <ul>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">HISTORY</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title"><a href="">CONTACT</a></h3>
+                    <h3 class="footer_title"><a href="">PRIVACY</a></h3>
+                </div>
+            </div>
+            <p class="footer_copyright">© 2023 Fair Sun Industrial Co., Ltd. All Rights Reserved. Website Designed by <a href="">Lets Media EZB2B</a></p>
+        </div>
+    </footer>
+    
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+
+
+</body>
+</html>

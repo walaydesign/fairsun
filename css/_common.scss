@@ -10,12 +10,22 @@ $font-poppins: "Poppins", sans-serif;
 
 $transition-common: 0.3s;
 
+@font-face {
+    font-family: AvantNormal;
+    src: url(../font/AVANTN.woff) format("woff"),
+         url(../font/AVANTN.otf) format("opentype");
+}
+
+@font-face {
+    font-family: AvantDemi;
+    src: url(../font/avantgarde_demi.woff) format("woff"),
+         url(../font/avantgarde_demi.otf) format("opentype");
+}
+
 body {
     font-family: $font-ubuntu;
     font-size: 20px;
     color: $gray-4;
-    height: 2000px;
-    // background-color: #000;
 }
 
 * {
@@ -37,7 +47,7 @@ a {
     }
 }
 
-input, button, select {
+input, button, select, textarea {
     background-color: transparent;
     outline: none;
     border: 0;
@@ -137,7 +147,9 @@ main {
                     }
                     &.active {
                         >a {
-                            color: $primary-1;
+                            // color: $primary-1;
+                            background-color: $primary-1;
+                            color: #fff !important;
                             &::after {
                                 height: 5px;
                             }
@@ -382,6 +394,11 @@ main {
                         }
                         @media screen and (min-width: 992px) {
                             &:hover {
+                                >a {
+                                    color: #fff !important;
+                                }
+                            }
+                            &.active {
                                 >a {
                                     color: #fff !important;
                                 }
@@ -723,6 +740,7 @@ main {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                z-index: 10;
                 &::before, &::after {
                     display: none;
                 }
@@ -842,6 +860,35 @@ main {
             transform: translate(-15px, -15px);
         }
     }
+    @media screen and (max-width: 1250px) {
+        &-wrap {
+            &.search-top {
+                .search {
+                    padding: 0 20px;
+                    &_title {
+                        width: 50px;
+                    }
+                    &_input {
+                        width: calc((100% - 50px - 50px - 75px) / 4);
+                    }
+                    button {
+                        width: 50px;
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &_title {
+            h4 {
+                display: none;
+            }
+        }
+        &_icon {
+            margin: 0;
+        }
+    }
     @media screen and (max-width: 991px) {
         position: absolute;
         bottom: inherit !important;
@@ -879,4 +926,197 @@ main {
             width: calc(100% - 100px);
         }
     }
+}
+
+.footer {
+    padding: 60px 0 35px;
+    border-top: 9px solid $primary-1;
+    background-color: #fff;
+    &_logo {
+        margin-bottom: 40px;
+        img {
+            margin: 0 8px;
+        }
+        &_round {
+            width: 140px;
+        }
+        &_gear {
+            width: 240px;
+        }
+    }
+    &_title {
+        margin-bottom: 15px;
+        color: $gray-2;
+        font-size: 24px;
+        font-weight: 700;
+        a {
+            color: $gray-2;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+    ul {
+        a {
+            font-size: 20px;
+            color: $gray-2;
+        }
+    }
+    &_copyright {
+        padding-top: 30px;
+        border-top: 1px solid $gray-1;
+        text-align: center;
+        font-family: $font-poppins;
+        color: $gray-3;
+        margin: 35px 0 0;
+        font-size: 16px;
+        display: block;
+        a {
+            transition: $transition-common;
+            font-family: $font-poppins;
+            color: $gray-3;
+            &:hover {
+                color: $primary-1;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        .row {
+            >div {
+                margin-bottom: 50px;
+            }
+        }
+        &_copyright {
+            margin-top: 0;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_logo {
+            &_round {
+                width: 100px;
+            }
+            &_gear {
+                width: 170px;
+            }
+        }
+        &_title {
+            margin-bottom: 5px;
+            font-size: 20px;
+            a {
+                font-size: 20px;
+            }
+        }
+        ul {
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.pt-inner {
+    padding-top: 170px;
+    @media screen and (max-width: 991px) {
+        padding-top: 80px;
+    }
+}
+
+.innerPage {
+    padding-top: 80px;
+    &-wrap {
+        background-image: url(../img/about-bg-2.png);
+        background-size: 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 50px;
+    }
+}
+
+.page {
+    &-title {
+        font-size: 48px;
+        font-weight: 900;
+        color: $primary-1;
+        margin-bottom: 70px;
+        text-transform:uppercase;
+    }
+    &-subtitle {
+        font-size: 24px;
+        font-weight: normal;
+    }
+    @media screen and (max-width: 767px) {
+        &-title {
+            font-size: 38px;
+        }
+        &-subtitle {
+            font-size: 20px;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &-title {
+            font-size: 32px;
+        }
+        &-subtitle {
+            font-size: 16px;
+        }
+    }
+}
+
+.breadcrumb-common {
+    padding-bottom: 30px;
+    li {
+        padding-right: 12px;
+        position: relative;
+        color: $gray-2;
+        font-size: 16px;
+        &:not(:last-child) {
+            &::after {
+                position: absolute;
+                content: "/";
+                top: 50%;
+                right: 0;
+                transform: translate(-50%, -50%);
+                color: $gray-2;
+                font-size: 16px;
+            }
+        }
+    }
+    a {
+        color: $gray-2 !important;
+        font-size: 16px;
+        transition: $transition-common;
+        &:hover {
+            color: $primary-1 !important;
+        }
+    }
+}
+
+.pagination {
+    margin-bottom: 100px;
+    &_arrow {
+        display: flex;
+        justify-content: center;
+        width: 40px;
+        >img {
+            height: 14px;
+            transition: $transition-common;
+        }
+        &:hover {
+            >img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    span {
+        color: $gray-2;
+        font-size: 22px;
+        margin: 0 20px;
+    }
+}
+
+
+
+.modal-backdrop {
+    background-color: transparent;
 }

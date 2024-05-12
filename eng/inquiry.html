@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼎傑企業</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header light d-flex align-items-center justify-content-between">
+        <div class="header_left d-flex align-items-center">
+            <a class="header_logo d-flex align-items-center" href="./index.html">
+                <img class="header_logo_round d-sm-block d-none" src="../img/logo.png" alt="">
+                <div class="header_logo_gear">
+                    <img class="header_logo_gear_white" src="../img/logo-2.png" alt="">
+                    <img class="header_logo_gear_dark" src="../img/logo-3.png" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="header_right d-flex align-items-center">
+            <nav class="header_nav d-lg-flex align-items-center">
+                <ul class="header_nav_first d-lg-flex">
+                    <li class="drop">
+                        <a class="header_nav_firstLink" data-link="./products.html">PRODUCTS</a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li class="d-lg-none"><a href="">ALL</a></li>
+                                <li><a href="">PASSENGER CAR</a></li>
+                                <li><a href="">TRUCK</a></li>
+                                <li><a href="">SPETIALTY APPLICATION</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="drop">
+                        <a>ARTICLE</a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li><a href="">NEWS</a></li>
+                                <li><a href="">BLOG</a></li>
+                                <li><a href="">Q & A</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">E-CATALOG</a></li>
+                    <li><a href="">ALIBABA</a></li>
+                    <li class="drop">
+                        <a>COMPANY</a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">HISTORY</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">CONTACT</a></li>
+                    <li class="drop d-lg-none">
+                        <a>
+                            <div class="header_lang_active d-flex align-items-center">
+                                <img src="../img/globe.png" alt="">
+                                <span>EN</span>
+                            </div>
+                        </a>
+                        <div class="header_nav_second">
+                            <ul>
+                                <li><a href="" class="active">EN</a></li>
+                                <li><a href="">繁體中文</a></li>
+                                <li><a href="">簡體中文</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header_search d-lg-none">
+                <img class="header_search_white" src="../img/search-2.png" alt="">
+                <img class="header_search_dark" src="../img/search-2-dark.png" alt="">
+            </div>
+            <div class="header_lang d-lg-flex d-none">
+                <div class="header_lang_active d-flex align-items-center">
+                    <img class="header_lang_white" src="../img/globe.png" alt="">
+                    <img class="header_lang_dark" src="../img/globe-dark.png" alt="">
+                </div>
+                <div class="header_lang_list">
+                    <ul>
+                        <li><a href="" class="active">EN</a></li>
+                        <li><a href="">繁體中文</a></li>
+                        <li><a href="">簡體中文</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="./inquiry.html" class="header_inquiry">
+                <img class="header_inquiry_white" src="../img/cart.png" alt="">
+                <img class="header_inquiry_dark" src="../img/cart-dark.png" alt="">
+                <div class="header_inquiry_num">99</div>
+            </a>
+            <div class="header_menu d-lg-none d-flex align-items-center justify-content-center">
+                <div class="header_menu_inner">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="search-wrap search-top">
+        <div class="search-bg"></div>
+        <div class="search">
+            <div class="search_title d-flex align-items-center">
+                <img class="search_title_icon icon-red" src="../img/search.png" alt="">
+                <img class="search_title_icon icon-white" src="../img/search-white.png" alt="">
+                <h4>SEARCH FILTER</h4>
+            </div>
+            <div class="search_input">
+                <label for="">TYPE</label>
+                <select name="" id="">
+                    <option value="">Type</option>
+                </select>
+            </div>
+            <div class="search_input">
+                <label for="">PARTS</label>
+                <select name="" id="">
+                    <option value="">Parts</option>
+                </select>
+            </div>
+            <div class="search_input">
+                <label for="">MAKE</label>
+                <select name="" id="">
+                    <option value="">Make</option>
+                </select>
+            </div>
+            <div class="search_input">
+                <label for="">OEM Number</label>
+                <input type="text" placeholder="OEM Number">
+            </div>
+            <button class="d-flex align-items-center justify-content-center">
+                <span>Search</span>
+                <img class="search_btn" src="../img/search-2.png" alt="">
+            </button>
+        </div>
+    </div>
+
+    <main class="pt-inner innerPage-wrap">
+        <div class="innerPage">
+            <div class="container">
+                <h1 class="page-title">Inquiry</h1>
+            </div>
+            <div class="inquiry">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="inquiry_item">
+                                <div class="inquiry_pic"><img src="../img/product-6.png" alt=""></div>
+                                <div class="inquiry_text">
+                                    <h2>FS-AG03</h2>
+                                    <table class="inquiry_table">
+                                        <tr>
+                                            <td class="inquiry_table_title">OEM No.</td>
+                                            <td class="inquiry_table_content">12336863, AE13467, 131332C2, 9060</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inquiry_table_title">SMP Part No.</td>
+                                            <td class="inquiry_table_content">SS525</td>
+                                        </tr>
+                                    </table>
+                                    <div class="d-flex align-items-center">
+                                        <div class="inquiry_num d-flex align-items-center">
+                                            <button class="inquiry_num_minus inquiry_num_btn"><img src="../img/dash.png" alt=""></button>
+                                            <input type="number" value="2" class="inquiry_num_val">
+                                            <button class="inquiry_num_plus inquiry_num_btn"><img src="../img/plus.png" alt=""></button>
+                                        </div>
+                                        <img class="inquiry_delete" src="../img/trash.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inquiry_item">
+                                <div class="inquiry_pic"><img src="../img/product-6.png" alt=""></div>
+                                <div class="inquiry_text">
+                                    <h2>FS-AG03</h2>
+                                    <table class="inquiry_table">
+                                        <tr>
+                                            <td class="inquiry_table_title">OEM No.</td>
+                                            <td class="inquiry_table_content">12336863, AE13467, 131332C2, 9060</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inquiry_table_title">SMP Part No.</td>
+                                            <td class="inquiry_table_content">SS525</td>
+                                        </tr>
+                                    </table>
+                                    <div class="d-flex align-items-center">
+                                        <div class="inquiry_num d-flex align-items-center">
+                                            <button class="inquiry_num_minus inquiry_num_btn"><img src="../img/dash.png" alt=""></button>
+                                            <input type="number" value="2" class="inquiry_num_val">
+                                            <button class="inquiry_num_plus inquiry_num_btn"><img src="../img/plus.png" alt=""></button>
+                                        </div>
+                                        <img class="inquiry_delete" src="../img/trash.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inquiry_item">
+                                <div class="inquiry_pic"><img src="../img/product-6.png" alt=""></div>
+                                <div class="inquiry_text">
+                                    <h2>FS-AG03</h2>
+                                    <table class="inquiry_table">
+                                        <tr>
+                                            <td class="inquiry_table_title">OEM No.</td>
+                                            <td class="inquiry_table_content">12336863, AE13467, 131332C2, 9060</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="inquiry_table_title">SMP Part No.</td>
+                                            <td class="inquiry_table_content">SS525</td>
+                                        </tr>
+                                    </table>
+                                    <div class="d-flex align-items-center">
+                                        <div class="inquiry_num d-flex align-items-center">
+                                            <button class="inquiry_num_minus inquiry_num_btn"><img src="../img/dash.png" alt=""></button>
+                                            <input type="number" value="2" class="inquiry_num_val">
+                                            <button class="inquiry_num_plus inquiry_num_btn"><img src="../img/plus.png" alt=""></button>
+                                        </div>
+                                        <img class="inquiry_delete" src="../img/trash.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-form_main inquiry_contact">
+                                <div class="contact-form_input">
+                                    <label for="">
+                                        NAME<span class="highlight">*</span>
+                                    </label>
+                                    <input type="text">
+                                </div>
+                                <div class="contact-form_input">
+                                    <label for="">
+                                        COMPANY
+                                    </label>
+                                    <input type="text">
+                                </div>
+                                <div class="contact-form_input">
+                                    <label for="">
+                                        PHONE<span class="highlight">*</span>
+                                    </label>
+                                    <input type="number">
+                                </div>
+                                <div class="contact-form_input">
+                                    <label for="">
+                                        E-MAIL<span class="highlight">*</span>
+                                    </label>
+                                    <input type="email">
+                                </div>
+                                <div class="contact-form_input textarea">
+                                    <label for="">
+                                        MESSAGE<span class="highlight">*</span>
+                                    </label>
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="contact-form_input verify">
+                                    <label for="">
+                                        VERIFICATION<span class="highlight">*</span>
+                                    </label>
+                                    <input type="text">
+                                    <img class="verify_num" src="../img/number.png" alt="">
+                                    <img class="verify_rotate" src="../img/rotate-gray.png" alt="">
+                                </div>
+                                <button class="contact-form_btn">SEND</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="breadcrumb-common">
+                <ul class="container d-flex align-items-center">
+                    <li><a href="">Home</a></li>
+                    <li>Inquiry</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_logo d-flex align-items-center justify-content-center">
+                <img class="footer_logo_round" src="../img/logo.png" alt="">
+                <img class="footer_logo_gear" src="../img/logo-3.png" alt="">
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title"><a href="">PRODUCTS</a></h3>
+                    <ul>
+                        <li><a href="">PASSENGER CAR</a></li>
+                        <li><a href="">TRUCK</a></li>
+                        <li><a href="">SPECIALITY APPLICATION</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title">ARTICLE</h3>
+                    <ul>
+                        <li><a href="">NEWS</a></li>
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="">Q & A</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title"><a href="">ECATALOG</a></h3>
+                    <h3 class="footer_title"><a href="">ALIBABA</a></h3>
+                    <h3 class="footer_title">COMPANY</h3>
+                    <ul>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">HISTORY</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h3 class="footer_title"><a href="">CONTACT</a></h3>
+                    <h3 class="footer_title"><a href="">PRIVACY</a></h3>
+                </div>
+            </div>
+            <p class="footer_copyright">© 2023 Fair Sun Industrial Co., Ltd. All Rights Reserved. Website Designed by <a href="">Lets Media EZB2B</a></p>
+        </div>
+    </footer>
+    
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+
+    <script>
+        $(".inquiry_num_btn").click(function(){
+            let num = $(this).parents(".inquiry_num").find(".inquiry_num_val").val();
+            if($(this).hasClass("inquiry_num_minus")) {
+                if(num > 0) {
+                    num--;
+                }else {
+                    num = 0;
+                }
+            }else if($(this).hasClass("inquiry_num_plus")) {
+                num++;
+            }
+            $(this).parents(".inquiry_num").find(".inquiry_num_val").val(num)
+        })
+    </script>
+
+
+</body>
+</html>
