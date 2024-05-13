@@ -662,6 +662,7 @@
                 width: 100%;
                 padding-bottom: 75%;
                 position: relative;
+                display: block;
                 >img {
                     position: absolute;
                     width: 100%;
@@ -669,6 +670,12 @@
                     object-fit: cover;
                     top: 0;
                     left: 0;
+                    transition: $transition-common;
+                }
+                &:hover {
+                    >img {
+                        transform: scale(1.2);
+                    }
                 }
             }
             &-next, &-prev {

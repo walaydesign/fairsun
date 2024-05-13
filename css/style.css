@@ -4793,6 +4793,7 @@ main {
   width: 100%;
   padding-bottom: 75%;
   position: relative;
+  display: block;
 }
 
 .product-detail_more_swiper_pic > img {
@@ -4803,6 +4804,13 @@ main {
      object-fit: cover;
   top: 0;
   left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product-detail_more_swiper_pic:hover > img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .product-detail_more_swiper-next, .product-detail_more_swiper-prev {
