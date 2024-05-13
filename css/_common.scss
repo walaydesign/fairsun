@@ -213,21 +213,6 @@ main {
         &_dark {
             opacity: 0;
         }
-        // padding: 6px 15px;
-        // border: 1px solid #000;
-        // border-radius: 100px;
-        // margin-right: 30px;
-        // svg {
-        //     width: 15px;
-        //     margin-right: 7px;
-        //     path {
-        //         transition: $transition-common;
-        //     }
-        // }
-        // span {
-        //     font-size: 0.875em;
-        //     transition: $transition-common;
-        // }
         &_num {
             font-size: 12px;
             width: 18px;
@@ -332,7 +317,7 @@ main {
             transition: $transition-common;
         }   
         &_dark {
-            // opacity: 0;
+            opacity: 0;
         }
     }
     &_menu {
@@ -437,7 +422,13 @@ main {
                     }
                 }
             }
-            &_search {   
+            &_search {  
+                &_dark {
+                    opacity: 1;
+                }
+                &_white {
+                    opacity: 0;
+                }
                 &::placeholder {
                     color: transparent;
                 }
