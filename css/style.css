@@ -4322,6 +4322,12 @@ main {
 .inquiry_delete {
   cursor: pointer;
   width: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.inquiry_delete:hover {
+  opacity: 0.7;
 }
 
 .inquiry_contact {
@@ -4756,9 +4762,30 @@ main {
   margin-right: 10px;
 }
 
+.product-4th_link svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.product-4th_link svg .cls-1 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .product-4th_link span {
   font-size: 18px;
   color: #999999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product-4th_link:hover svg .cls-1 {
+  fill: #ff0000;
+}
+
+.product-4th_link:hover span {
+  color: #ff0000;
 }
 
 .product-4th .page-title {
