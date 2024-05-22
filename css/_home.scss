@@ -162,6 +162,7 @@
         // border-left: 3px solid #fff;
         position: relative;
         transition: $transition-common;
+        cursor: pointer;
         z-index: 0;
         span {
             display: block;
@@ -188,9 +189,10 @@
             transition: $transition-common;
         }
         &:hover {
-            color: $primary-1;
+            opacity: 0.7;
+            // color: $primary-1;
             &::before {
-                width: 100%;
+                // width: 100%;
             }
         }
     }
@@ -256,6 +258,8 @@
                 &_pic {
                     width: 38%;
                     opacity: 1;
+                    // width: 120%;
+                    // height: 120%;
                 }
                 &_list {
                     left: 38%;
@@ -267,6 +271,7 @@
         }
         &:not(.active) {
             &:hover {
+                width: 200px;
                 .home-product {
                     &_pic {
                         opacity: 0.3;
@@ -294,6 +299,7 @@
                 object-fit: cover;
                 top: 0;
                 left: 0;
+                transition: $transition-common;
             }
         }
     }
@@ -357,12 +363,16 @@
         }
     }
     &-next, &-prev {
-        width: 23px;
+        // width: 23px;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%5);
-        >img {
-            width: 100%;
+        transform: translateY(-50%);
+        >svg {
+            width: 50px;
+            height: 50px;
+            .cls-1 {
+                fill: $primary-1;
+            }
         }
     }
     &-next {
@@ -471,6 +481,7 @@
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
+    background-attachment:fixed;
     &_title {
         margin-bottom: 70px;
         position: relative;
@@ -539,9 +550,9 @@
                 &::after {
                     position: absolute;
                     content: "";
-                    width: 42px;
-                    height: 42px;
-                    background-image: url(../img/x.png);
+                    width: 35px;
+                    height: 35px;
+                    background-image: url(../img/x-white.svg);
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -584,8 +595,8 @@
             }
         }
         &_pic {
-            width: 90px;
-            height: 90px;
+            // width: 90px;
+            // height: 90px;
             position: relative;
             margin-bottom: 20px;
             >img {
@@ -596,6 +607,20 @@
                 top: 0;
                 left: 0;
             }
+            >svg {
+                // position: absolute;
+                width: 90px;
+                height: 90px;
+                .cls-1 {
+                    fill: $primary-1;
+                }
+            }
+        }
+        &_develop {
+            transform: scale(1.1);
+        }
+        &_quality {
+            transform: scale(0.9);
         }
     }
     @media screen and (max-width: 1399px) {
@@ -614,9 +639,11 @@
         }
         &_icon {
             &_pic {
-                width: 70px;
-                height: 70px;
                 margin-bottom: 10px;
+                >svg {
+                    width: 70px;
+                    height: 70px;
+                }
             }
             &_inner {
                 h3 {
@@ -793,6 +820,7 @@
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
+    background-attachment:fixed;
     .home-title {
         margin-bottom: 50px;
     }
@@ -836,20 +864,33 @@
         margin-right: 40px;
     }
     &_icon {
-        width: 25px;
-    }
-    @media screen and (max-width: 575px) {
-        .home-title {
-            margin-bottom: 30px;
+        width: 30px;
+        height: 30px;
+        .cls-1 {
+            fill: $primary-1;
         }
+    }
+    @media screen and (max-width: 767px) {
         &_vertify, &_number {
             margin-right: 20px;
         }
         &_number {
             width: 80px;
         }
+
+    }
+    @media screen and (max-width: 575px) {
+        .home-title {
+            margin-bottom: 30px;
+        }
         &_icon {
-            width: 20px;
+            // width: 20px;
+            // height: 20px;
+            // width: 20px;
+        }
+        &_vertify {
+            width: calc(100% - 30px - 80px - 40px) !important;
+            max-width: inherit;
         }
         input, textarea {
             font-size: 18px;

@@ -6,9 +6,11 @@
     <title>鼎傑企業</title><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aos/aos.css">
+    <link rel="stylesheet" href="../css/style.css?v=20240513">
 </head>
 <body>
     <header class="header light d-flex align-items-center justify-content-between">
@@ -148,11 +150,17 @@
                 <div class="container d-flex flex-wrap align-items-start">
                     <div class="product-3rd_text">
                         <h1 class="page-title">Neutral Safety Switch</h1>
-                        <p>
-                            Neutral safety switches prevent you from starting your car in any gear other than neutral or park.<br>
-                            <br>
-                            Neutral safety switches have been around since the 1950s, and have been installed on almost every production car with an automatic transmission since the 1980s. Most people don’t ever think about the neutral safety switch. Unfortunately, if one starts to fail it can cause many problems for your car.                    
-                        </p>
+                        <div class="product-3rd_text_content">
+                            <p class="inner">
+                                Neutral safety switches prevent you from starting your car in any gear other than neutral or park.<br>
+                                <br>
+                                Neutral safety switches have been around since the 1950s, and have been installed on almost every production car with an automatic transmission since the 1980s. Most people don’t ever think about the neutral safety switch. Unfortunately, if one starts to fail it can cause many problems for your car.                    
+                            </p>
+                        </div>
+                        <div class="product-3rd_readmore article-list_more">
+                            <span class="more">READ MORE +</span>
+                            <span class="less">READ LESS -</span>
+                        </div>
                     </div>
                     <div class="product-3rd_pic">
                         <img src="../img/product-18.png" alt="">
@@ -396,7 +404,7 @@
                 <div class="contact">
                     <div class="contact_inner">
                         <a href="./contact.html" class="contact_btn d-flex align-items-center">
-                            <img src="../img/contact-icon.png" alt="">
+                            <img src="../img/contact-icon.svg" alt="">
                             <span>CONTACT US</span>
                         </a>
                         <div class="contact_text">
@@ -469,6 +477,17 @@
     <script>
         $(".product-3rd_nav_active").click(function() {
             $(this).parents(".product-3rd_nav").find("ul").slideToggle(300);
+        })
+
+        $(".product-3rd_readmore").click(function(){
+            let height = $(".product-3rd_text_content").find(".inner").height();
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+                $(".product-3rd_text_content").height("173px");
+            }else {
+                $(this).addClass("active");
+                $(".product-3rd_text_content").height(height);
+            }
         })
     </script>
 

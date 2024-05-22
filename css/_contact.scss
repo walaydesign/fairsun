@@ -47,11 +47,12 @@
         img {
             width: 65px;
             margin-right: 7px;
+            transform: translateY(-5px);
         }
         span {
             font-size: 24px;
             font-weight: 700;
-            transform: translateY(5px);
+            // transform: translateY(-5px);
         }
         &::after {
             position: absolute;
@@ -140,10 +141,11 @@
             }
             &.verify {
                 input {
-                    width: calc(100% - 150px - 30px - 18px - 100px - 70px);
+                    width: calc(100% - 150px - 30px - 24px - 100px - 70px);
                 }
                 .verify_rotate {
-                    width: 18px;
+                    width: 24px;
+                    height: 24px;
                     cursor: pointer;
                 }
                 .verify_num {
@@ -301,11 +303,12 @@
                     margin: 0 15px;
                 }
                 &_rotate {
-                    width: 18px;
+                    width: 25px;
+                    height: 25px;
                 }
                 input {
                     margin: 0;
-                    width: calc(100% - 18px - 30px - 100px);
+                    width: calc(100% - 25px - 30px - 100px);
                 }
             }
             button {
@@ -347,7 +350,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     input {
-                        width: calc(100% - 18px - 100px - 70px);
+                        width: calc(100% - 24px - 100px - 70px);
                     }
                 }
             }
@@ -466,10 +469,10 @@
             &_input {
                 &.verify {
                     input {
-                        width: calc(100% - 15px - 60px - 30px);
+                        width: calc(100% - 24px - 60px - 30px);
                     }
                     .verify_rotate {
-                        width: 15px;
+                        // width: 15px;
                     }
                     .verify_num {
                         width: 60px;

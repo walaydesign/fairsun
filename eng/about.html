@@ -6,9 +6,11 @@
     <title>鼎傑企業</title><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aos/aos.css">
+    <link rel="stylesheet" href="../css/style.css?v=20240513">
 </head>
 <body>
     <header class="header light d-flex align-items-center justify-content-between">
@@ -36,7 +38,7 @@
                         </div>
                     </li>
                     <li class="drop">
-                        <a>ARTICLE</a>
+                        <a class="header_nav_firstLink" data-link="./news.html">ARTICLE</a>
                         <div class="header_nav_second">
                             <ul>
                                 <li><a href="./news.html">NEWS</a></li>
@@ -48,7 +50,7 @@
                     <li><a href="./catalog.html">E-CATALOG</a></li>
                     <li><a href="">ALIBABA</a></li>
                     <li class="drop active">
-                        <a>COMPANY</a>
+                        <a class="header_nav_firstLink" data-link="./about.html">COMPANY</a>
                         <div class="header_nav_second">
                             <ul>
                                 <li><a href="./about.html">ABOUT</a></li>
@@ -145,19 +147,19 @@
     <main class="pt-inner innerPage-wrap">
         <div class="innerPage">
             <div class="container">
-                <h1 class="page-title">About</h1>
+                <h1 class="page-title" data-aos="fade-up" data-aos-duration="1000">About</h1>
             </div>
             <div class="container">
                 <div class="about_lowprice">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
-                            <h2>
+                            <h2 data-aos="fade-up" data-aos-duration="1000">
                                 low-price, <br>high-quality 
                             </h2>
                         </div>
                         <div class="col-lg-6">
-                            <img class="about_lowprice_pic" src="../img/certificate.png" alt="">
-                            <p class="about_text">
+                            <img class="about_lowprice_pic" src="../img/certificate.png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <p class="about_text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                 Fair Sun Industrial Co. Ltd. was established in 1980 specialized in Automotive Switches, Door Lock Actuators, Solenoids, Relays, Clock Springs, Sensors, and other electrical auto parts to cover many different car brands. For over 30 years, Fair Sun has been focused on applying the best production technologies to maintain our customers satisfaction with the highest quality standards.
                             </p>
                         </div>
@@ -166,10 +168,14 @@
             </div>
             <div class="about_bigpic">
                 <div class="about_bigpic_main">
-                    <img class="about_bigpic_top" src="../img/about-1.png" alt="">
-                    <img class="about_bigpic_bottom" src="../img/about-2.png" alt="">
+                    <div class="about_bigpic_top">
+                        <img class="about_bigpic_top_base" src="../img/about-1.png" alt="" data-aos="fade-left" data-aos-duration="1000">
+                        <img class="about_bigpic_top_text" src="../img/about-1-text.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    </div>
+                    <!-- <img class="about_bigpic_top" src="../img/about-1.png" alt=""> -->
+                    <img class="about_bigpic_bottom" src="../img/about-2.png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 </div>
-                <div class="container">
+                <div class="container" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     <div class="row">
                         <div class="col-md-6">
                             <p class="about_text">With over 30 years manufacturing experience and IAFT16949 certification, Fair Sun has became Tier 1 supplier to OE/OES customers in North America and Europe from 2004.</p><br>
@@ -188,11 +194,11 @@
             </div>
             <div class="about_organization">
                 <div class="container">
-                    <h2 class="page-title">ORGANIZATION</h2>
-                    <h3 class="page-subtitle">TAYLOR HONG – CHAIRMAN OF THE BOARD</h3>
+                    <h2 class="page-title" data-aos="fade-up" data-aos-duration="1000">ORGANIZATION</h2>
+                    <h3 class="page-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">TAYLOR HONG – CHAIRMAN OF THE BOARD</h3>
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
-                            <div class="about_organization_item">
+                            <div class="about_organization_item" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="mb-2 d-flex align-items-center">
                                     <span class="about_organization_num">01</span>
                                     <div class="about_organization_divide">/</div>
@@ -205,7 +211,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="about_organization_item">
+                            <div class="about_organization_item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                 <div class="mb-2 d-flex align-items-center">
                                     <span class="about_organization_num">02</span>
                                     <div class="about_organization_divide">/</div>
@@ -218,7 +224,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="about_organization_item">
+                            <div class="about_organization_item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                 <div class="mb-2 d-flex align-items-center">
                                     <span class="about_organization_num">03</span>
                                     <div class="about_organization_divide">/</div>
@@ -231,7 +237,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="about_organization_item">
+                            <div class="about_organization_item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                                 <div class="mb-2 d-flex align-items-center">
                                     <span class="about_organization_num">04</span>
                                     <div class="about_organization_divide">/</div>
@@ -244,7 +250,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="about_organization_item">
+                            <div class="about_organization_item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
                                 <div class="mb-2 d-flex align-items-center">
                                     <span class="about_organization_num">05</span>
                                     <div class="about_organization_divide">/</div>
@@ -263,11 +269,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 order-lg-1 order-2">
-                            <img class="about_level_pic" src="../img/about-3.png" alt="">
+                            <img class="about_level_pic" src="../img/about-3.svg" alt="" data-aos="fade-up" data-aos-duration="1000">
                         </div>
                         <div class="col-lg-6 order-lg-2 order-1">
-                            <h2 class="page-title">3-LEVEL QUALITY POLICY </h2>
-                            <p class="about_text">
+                            <h2 class="page-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">3-LEVEL QUALITY POLICY </h2>
+                            <p class="about_text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                 Our goal is to supply the highest quality products, not only emphasizing and improving production processes but also with the best techniques to use the most updated QC systems. All our products are TQC (Total Quality Control). We are not satisfied with the actual business situation and steady growth for the last 30 years, we are already developing new products and continuously improving our processes to continue winning market share and satisfying customers all over the world.<br>
                                 <br>
                                 Our main products are Automotive Switches, Door Lock Actuators, Solenoids, Relays, Clock Springs, Sensors, etc… Main markets are North America, Europe and Middle East other markets we are currently supplying are South America, Asia, Oceania and Africa.
@@ -329,6 +335,7 @@
     <script src="../js/jquery/jquery.min.js"></script>
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/aos/aos.js"></script>
     <script src="../js/common.js"></script>
 
 

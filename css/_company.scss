@@ -28,6 +28,16 @@
             width: 80%;
             display: block;
             margin-left: auto;
+            position: relative;
+            &_base {
+                width: 100%;
+            }
+            &_text {
+                position: absolute;
+                width: 88%;
+                bottom: -1%;
+                left: 5%;
+            }
         }
         &_bottom {
             width: 44%;

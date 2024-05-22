@@ -6,9 +6,11 @@
     <title>鼎傑企業</title><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aos/aos.css">
+    <link rel="stylesheet" href="../css/style.css?v=20240513">
 </head>
 <body>
     <header class="header light d-flex align-items-center justify-content-between">
@@ -153,7 +155,7 @@
                         </p>
                     </div>
                     <a href="./product-3rd.html" class="product-4th_link">
-                        <img src="../img/arrow-up-left.png" alt="">
+                        <img src="../img/arrow-up-left.svg" alt="">
                         <span>OTHERS</span>
                     </a>
                 </div>
@@ -170,9 +172,9 @@
                                 <td class="table-title"><div class="product-4th_table_inner">SMP Part No.</div></td>
                                 <td class="table-title"><div class="product-4th_table_inner">Other Reference No.</div></td>
                             </tr>
-                            <tr class="product-4th_tr">
-                                <td class="table-content">
-                                    <a href="./product-detail.html" class="product-4th_table_inner"><img class="product-4th_table_pic" src="../img/product-18.png" alt=""></a>
+                            <tr class="product-4th_tr product-4th_tr_link" data-link="./product-detail.html">
+                                <td class="table-content table-content-pic">
+                                    <div class="product-4th_table_inner"><img class="product-4th_table_pic" src="../img/product-18.png" alt=""></div>
                                 </td>
                                 <td class="table-content highlight"><div class="product-4th_table_inner">FS-AG03</div></td>
                                 <td class="table-content">
@@ -190,9 +192,9 @@
                                 <td class="table-title"><div class="product-4th_table_inner">SMP Part No.</div></td>
                                 <td class="table-title"><div class="product-4th_table_inner">Other Reference No.</div></td>
                             </tr>
-                            <tr class="product-4th_tr">
-                                <td class="table-content">
-                                    <a href="./product-detail.html" class="product-4th_table_inner"><img class="product-4th_table_pic" src="../img/product-18.png" alt=""></a>
+                            <tr class="product-4th_tr product-4th_tr_link" data-link="./product-detail.html">
+                                <td class="table-content table-content-pic">
+                                    <div class="product-4th_table_inner"><img class="product-4th_table_pic" src="../img/product-18.png" alt=""></div>
                                 </td>
                                 <td class="table-content highlight"><div class="product-4th_table_inner">FS-AG03</div></td>
                                 <td class="table-content">
@@ -210,9 +212,9 @@
                                 <td class="table-title"><div class="product-4th_table_inner">SMP Part No.</div></td>
                                 <td class="table-title"><div class="product-4th_table_inner">Other Reference No.</div></td>
                             </tr>
-                            <tr class="product-4th_tr">
-                                <td class="table-content">
-                                    <a href="./product-detail.html" class="product-4th_table_inner"><img class="product-4th_table_pic" src="../img/product-18.png" alt=""></a>
+                            <tr class="product-4th_tr product-4th_tr_link" data-link="./product-detail.html">
+                                <td class="table-content table-content-pic">
+                                    <div class="product-4th_table_inner"><img class="product-4th_table_pic" src="../img/product-18.png" alt=""></div>
                                 </td>
                                 <td class="table-content highlight"><div class="product-4th_table_inner">FS-AG03</div></td>
                                 <td class="table-content">
@@ -232,7 +234,7 @@
                 <div class="contact">
                     <div class="contact_inner">
                         <a href="./contact.html" class="contact_btn d-flex align-items-center">
-                            <img src="../img/contact-icon.png" alt="">
+                            <img src="../img/contact-icon.svg" alt="">
                             <span>CONTACT US</span>
                         </a>
                         <div class="contact_text">
@@ -337,10 +339,16 @@
             })
         }
     }
-    memberProductTable();
-    $(window).on("resize scroll",function(){
+        
         memberProductTable();
-    })
+        $(window).on("resize scroll",function(){
+            memberProductTable();
+        })
+
+        $(".product-4th_tr_link").click(function() {
+            let link = $(this).data("link");
+            window.location.assign(link);
+        })
     </script>
 
 </body>
