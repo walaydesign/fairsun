@@ -5,14 +5,16 @@
     border-radius: 60px 0 60px 0;
     // overflow: hidden;
     margin-bottom: 130px;
+    transition: $transition-common;
     &_inner {
         background-image: url(../img/contact-car.png);
         // background-size: auto 100%;
         background-size: 30%;
-        background-position: 0 center;
+        background-position: -5% center;
         background-repeat: no-repeat;
         padding: 55px 0;
         border-radius: 60px 0 60px 0;
+        transition: $transition-common;
     }
     &_text {
         width: 65%;
@@ -326,6 +328,14 @@
             }
         }
     }
+    &:hover {
+        // animation: bgchange 0.3s ease-in-out;
+        .contact {
+            &_inner {
+                background-position: 0 center;
+            }
+        }
+    }
     @media screen and (max-width: 1199px) {
         &-form {
             &_input {
@@ -500,3 +510,15 @@
         }
     }
 }
+
+// @keyframes bgchange {
+//     0% {
+//         background: linear-gradient(to right, #4b4b4b 0%, #8c8c8c 74%, #e0e0e0 100%);
+//     }
+//     50% {
+//         background: linear-gradient(to right, #e0e0e0 0%, #4b4b4b 74%, #8c8c8c 100%);
+//     }
+//     100% {
+//         background: linear-gradient(to right, #8c8c8c 0%, #e0e0e0 74%, #4b4b4b 100%);
+//     }
+// }

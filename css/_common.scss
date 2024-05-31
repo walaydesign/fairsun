@@ -101,6 +101,12 @@ main {
             width: 241px;
             height: 64px;
             position: relative;
+            path {
+                transition: $transition-common;
+                &.cls-text {
+                    fill: #fff;
+                }
+            }
             >img {
                 position: absolute;
                 width: 100%;
@@ -258,7 +264,7 @@ main {
             svg {
                 width: 100%;
                 height: 100%;
-                .cls-1 {
+                .cls-lang {
                     transition: $transition-common;
                     fill: #fff;
                 }
@@ -388,12 +394,17 @@ main {
       background: linear-gradient(to top, #999999 0%, #fbfcfe 50%, #fff 100%); 
        .header {
             &_logo_gear {
-                &_dark {
-                    opacity: 1;
+                path {
+                    &.cls-text {
+                        fill: #323232;
+                    }
                 }
-                &_white {
-                    opacity: 0;
-                }
+                // &_dark {
+                //     opacity: 1;
+                // }
+                // &_white {
+                //     opacity: 0;
+                // }
             }
             &_nav {
                 &_first {
@@ -467,6 +478,7 @@ main {
                 }
                 &_gear {
                     width: 201px;
+                    height: 54px;
                 }
             }
         }
@@ -611,10 +623,13 @@ main {
         }
         &_lang {
             &_active {
-                >img {
+                >svg {
                     width: 20px;
                     position: static;
                     margin-right: 10px;
+                    .cls-lang {
+                        fill: #fff !important;
+                    }
                 }
                 >span {
                     color: #fff;
@@ -650,8 +665,8 @@ main {
     @media screen and (max-width: 575px) {
         &_logo {
             &_gear {
-                width: 150px;
-                height: 40px;
+                width: 127px !important;
+                height: 40px !important;
             }
         }
     }
@@ -664,6 +679,7 @@ main {
     width: 490px;
     position: relative;
     z-index: 5;
+    transition: $transition-common;
     &_title {
         margin-bottom: 65px;
         z-index: 1;
@@ -953,7 +969,12 @@ main {
         &-bg {
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.9);
+            background-color: rgba(0,0,0,0.6);
+        }
+        &_title {
+            h4 {
+                display: block;
+            }
         }
     }
     @media screen and (max-width: 575px) {
@@ -1114,6 +1135,9 @@ main {
 
 .breadcrumb-common {
     padding-bottom: 30px;
+    >.container {
+        flex-wrap: wrap;
+    }
     li {
         padding-right: 12px;
         position: relative;
@@ -1135,6 +1159,7 @@ main {
         color: $gray-2 !important;
         font-size: 16px;
         transition: $transition-common;
+        white-space: nowrap;
         &:hover {
             color: $primary-1 !important;
         }
@@ -1161,6 +1186,55 @@ main {
         color: $gray-2;
         font-size: 22px;
         margin: 0 20px;
+    }
+}
+
+.privacy {
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    padding: 25px 40px;
+    z-index: 150;
+    p {
+        margin-bottom: 25px;
+        color: #fff;
+    }
+    a {
+        font-size: 18px;
+        text-decoration: underline;
+        font-weight: 600;
+        transition: $transition-common;
+        color: #fff;
+        &:hover{ 
+            color: $primary-1;
+        }
+    }
+    button {
+        font-size: 16px;
+        &:hover {
+            background-color: #fff;
+            color: $primary-1;
+        }
+    }
+    &_content {
+        font-size: 0.875em;
+    }
+    @media screen and (max-width: 575px) {
+        padding: 20px;
+        p {
+            font-size: 16px;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        button {
+            width: 100%;
+        }
     }
 }
 

@@ -53,3 +53,7 @@ $(".header_search").click(function(){
 $(".search-bg").click(function(){
     $(".search-wrap").fadeOut(300);
 })
+
+$(".privacy").find(".btn-more").click(function() {
+    $(".privacy").fadeOut(300);
+})
