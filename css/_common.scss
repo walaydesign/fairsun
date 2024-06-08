@@ -430,8 +430,8 @@ main {
             &_lang {
                 &_active {
                     svg {
-                        .cls-1 {
-                            fill: #000 !important;
+                        .cls-lang {
+                            fill: #000;
                         }
                     }
                 }
@@ -664,9 +664,13 @@ main {
     }
     @media screen and (max-width: 575px) {
         &_logo {
+            &_round {
+                width: 60px !important;
+                margin-right: 5px;
+            }
             &_gear {
-                width: 127px !important;
-                height: 40px !important;
+                width: 110px !important;
+                height: 29px !important;
             }
         }
     }
@@ -1029,6 +1033,10 @@ main {
         a {
             font-size: 20px;
             color: $gray-2;
+            transition: $transition-common;
+            &:hover {
+                color: $primary-1;
+            }
         }
     }
     &_copyright {
@@ -1199,11 +1207,12 @@ main {
     padding: 25px 40px;
     z-index: 150;
     p {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         color: #fff;
+        font-size: 16px;
     }
     a {
-        font-size: 18px;
+        font-size: 14px;
         text-decoration: underline;
         font-weight: 600;
         transition: $transition-common;
@@ -1214,13 +1223,11 @@ main {
     }
     button {
         font-size: 16px;
+        padding: 10px 30px;
         &:hover {
             background-color: #fff;
             color: $primary-1;
         }
-    }
-    &_content {
-        font-size: 0.875em;
     }
     @media screen and (max-width: 575px) {
         padding: 20px;

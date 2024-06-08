@@ -467,6 +467,7 @@
         &_link{
             cursor: pointer;
             transition: $transition-common;
+            position: relative;
             // position: relative;
             // box-sizing: border-box;
             // border: 5px solid transparent;
@@ -496,6 +497,7 @@
             // }
             td {
                 position: relative;
+                transition: $transition-common;
                 &:first-child {
                     &::before {
                         position: absolute;
@@ -525,15 +527,26 @@
                     }
                 }
             }
-            &:hover {
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
                 border: 5px solid $primary-1;
+                top: 0;
+                left: 0;
+                transition: $transition-common;
+                opacity: 0;
+            }
+            &:hover {
+                // border: 5px solid $primary-1;
                 td {
                     background-color: #fff;
                     &:first-child, &:last-child {
                         opacity: 1;
                     }
                 }
-                &::before, &::after {
+                &::after {
                     opacity: 1;
                 }
             }
