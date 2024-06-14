@@ -728,7 +728,7 @@ main {
 }
 
 .search input {
-  width: 250px;
+  width: 255px;
   height: 45px;
   font-size: 18px;
   font-weight: 500;
@@ -968,11 +968,13 @@ main {
 
 .search-wrap.search-top.scrolldown .search {
   top: 80px;
+  -webkit-transform: none;
+          transform: none;
 }
 
 @media screen and (max-width: 1600px) {
   .search {
-    padding: 40px 35px;
+    padding: 30px 25px;
     width: 350px;
   }
   .search_title {
@@ -985,12 +987,14 @@ main {
     margin-bottom: 15px;
   }
   .search input {
-    width: 160px;
+    width: 200px;
     margin-top: 10px;
+    font-size: 16px;
   }
   .search button {
     width: 145px;
     height: 45px;
+    bottom: 30px;
   }
   .search::before {
     width: 200px;
@@ -1105,6 +1109,12 @@ main {
   color: #666666;
   font-size: 24px;
   font-weight: 700;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer_title a:hover {
+  color: #ff0000;
 }
 
 .footer ul a {
@@ -1303,12 +1313,12 @@ main {
   color: #fff;
   bottom: 0;
   left: 0;
-  padding: 25px 40px;
+  padding: 20px;
   z-index: 150;
 }
 
 .privacy p {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #fff;
   font-size: 16px;
 }
@@ -1327,8 +1337,8 @@ main {
 }
 
 .privacy button {
-  font-size: 16px;
-  padding: 10px 30px;
+  font-size: 14px;
+  padding: 10px 25px;
 }
 
 .privacy button:hover {
@@ -1619,6 +1629,16 @@ main {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .mainNav_item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mainNav_item span {
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .mainNav {
     padding: 45px 0 15px;
@@ -1691,8 +1711,8 @@ main {
 }
 
 .home-product_item.active .home-product_pic_inner > img {
-  -webkit-animation: zoomin 10s ease-in-out infinite;
-          animation: zoomin 10s ease-in-out infinite;
+  -webkit-animation: zoomin 10s ease-in-out forwards;
+          animation: zoomin 10s ease-in-out forwards;
 }
 
 .home-product_item.active .home-product_list {
@@ -1905,6 +1925,10 @@ main {
   }
   .home-product_pic {
     width: 100% !important;
+  }
+  .home-product_pic_inner > img {
+    -webkit-animation: zoomin 10s ease-in-out forwards;
+            animation: zoomin 10s ease-in-out forwards;
   }
 }
 
@@ -3107,12 +3131,17 @@ main {
   color: #fff;
 }
 
+.article-list_item:hover .article-list_date a, .article-list_item:hover .article-list_title a, .article-list_item:hover .article-list_content a, .article-list_item:hover .article-list_tag a {
+  color: #fff;
+}
+
 .article-list_pic {
   position: relative;
   width: 100%;
   padding-bottom: 70%;
   border-radius: 30px 0 30px 0;
   overflow: hidden;
+  display: block;
 }
 
 .article-list_pic > img {

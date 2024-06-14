@@ -711,7 +711,7 @@ main {
         border-bottom: 1px solid $gray-3;
     }
     input {
-        width: 250px;
+        width: 255px;
         height: 45px;
         font-size: 18px;
         font-weight: 500;
@@ -896,12 +896,13 @@ main {
             &.scrolldown {
                 .search {
                     top: 80px;
+                    transform: none;
                 }
             }
         }
     }
     @media screen and (max-width: 1600px) {
-        padding: 40px 35px;
+        padding: 30px 25px;
         width: 350px;
         &_title {
             margin-bottom: 35px;
@@ -913,12 +914,14 @@ main {
             margin-bottom: 15px;
         }
         input {
-            width: 160px;
+            width: 200px;
             margin-top: 10px;
+            font-size: 16px;
         }
         button {
             width: 145px;
             height: 45px;
+            bottom: 30px;
         }
         &::before {
             width: 200px;
@@ -1027,6 +1030,10 @@ main {
             color: $gray-2;
             font-size: 24px;
             font-weight: 700;
+            transition: $transition-common;
+            &:hover {
+                color: $primary-1;
+            }
         }
     }
     ul {
@@ -1204,10 +1211,10 @@ main {
     color: #fff;
     bottom: 0;
     left: 0;
-    padding: 25px 40px;
+    padding: 20px;
     z-index: 150;
     p {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         color: #fff;
         font-size: 16px;
     }
@@ -1222,8 +1229,8 @@ main {
         }
     }
     button {
-        font-size: 16px;
-        padding: 10px 30px;
+        font-size: 14px;
+        padding: 10px 25px;
         &:hover {
             background-color: #fff;
             color: $primary-1;

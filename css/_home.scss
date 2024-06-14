@@ -241,6 +241,15 @@
             max-width: inherit;
         }
     }
+    @media screen and (max-width: 991px) {
+        &_item {
+            padding-left: 20px;
+            padding-right: 20px;
+            span {
+                font-size: 24px;
+            }
+        }
+    }
     @media screen and (max-width: 767px) {
         padding: 45px 0 15px;
         &_item {
@@ -302,7 +311,7 @@
                     // height: 120%;
                     &_inner {
                         >img {
-                            animation: zoomin 10s ease-in-out infinite;
+                            animation: zoomin 10s ease-in-out forwards;
                             // transform: scale(1.1);
                         }
                     }
@@ -504,6 +513,11 @@
         }
         &_pic {
             width: 100% !important; 
+            &_inner {
+                >img {
+                    animation: zoomin 10s ease-in-out forwards;
+                }
+            }
         }
     }
     @media screen and (max-width: 575px) {

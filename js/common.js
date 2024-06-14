@@ -43,6 +43,49 @@ function headerNavFirstLink(){
 headerNavFirstLink();
 
 
+function memberProductTable() {
+    if($(window).width()<992) {
+        $(".product-4th_table_main").each(function(){
+            $(this).find(".table-title").each(function(){
+                let thisHight = $(this).find(".table-title_inner").height();
+            })
+
+            let length = $(this).find(".product-4th_tr").find(".table-title").length;
+            titleHeight = $(this).find(".table-title").eq(0).height();
+            contentHeight = $(this).find(".table-content").eq(0).height();
+
+            for (let i=0; i<length; i++) {
+                let titleHeight, contentHeight, maxHeight;
+                titleHeight = $(this).find(".product-4th_tr .table-title").eq(i).find(".product-4th_table_inner").height();
+                contentHeight = $(this).find(".product-4th_tr .table-content").eq(i).find(".product-4th_table_inner").height();
+                if(titleHeight > contentHeight ) {
+                    maxHeight = titleHeight + 16;
+                }else {
+                    maxHeight = contentHeight + 16;
+            }
+
+            $(this).find(".table-title").eq(i).css("height",maxHeight + "px");
+            $(this).find(".table-content").eq(i).css("height",maxHeight + "px");
+        }
+    })
+}else {
+    $(".product-4th_table_inner, .product-4th_tr").each(function(){
+        $(this).css("height","auto");
+        $(this).find(".table-content").css("height","auto");
+        $(this).find(".table-title").css("height","auto");
+    })
+}
+}
+
+memberProductTable();
+$(window).on("resize scroll",function(){
+    memberProductTable();
+})
+
+$(".product-4th_tr_link").click(function() {
+    let link = $(this).data("link");
+    window.location.assign(link);
+})
 
 
 

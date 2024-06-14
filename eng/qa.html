@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/aos/aos.css">
-    <link rel="stylesheet" href="../css/style.css?v=20240608">
+    <link rel="stylesheet" href="../css/style.css?v=20240614">
 </head>
 <body>
     <header class="header light d-flex align-items-center justify-content-between">
@@ -113,7 +113,7 @@
                         <div class="header_nav_second">
                             <ul>
                                 <li><a href="" class="active">EN</a></li>
-                                <li><a href="">西文</a></li>
+                                <li><a href="">ES</a></li>
                             </ul>
                         </div>
                     </li>
@@ -152,7 +152,7 @@
                     <ul>
                         <ul>
                             <li><a href="" class="active">EN</a></li>
-                            <li><a href="">西文</a></li>
+                            <li><a href="">ES</a></li>
                         </ul>
                     </ul>
                 </div>
@@ -253,10 +253,12 @@
                             </div>
                         </div>
                         <div class="qa_list_answer">
-                            <div class="qa_list_icon">A</div>
-                            <p>
-                                A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
-                            </p>
+                            <div class="d-flex">
+                                <div class="qa_list_icon">A</div>
+                                <p>
+                                    A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="qa_list_item">
@@ -279,10 +281,12 @@
                             </div>
                         </div>
                         <div class="qa_list_answer">
-                            <div class="qa_list_icon">A</div>
-                            <p>
-                                A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
-                            </p>
+                            <div class="d-flex">
+                                <div class="qa_list_icon">A</div>
+                                <p>
+                                    A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="qa_list_item">
@@ -305,10 +309,12 @@
                             </div>
                         </div>
                         <div class="qa_list_answer">
-                            <div class="qa_list_icon">A</div>
-                            <p>
-                                A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
-                            </p>
+                            <div class="d-flex">
+                                <div class="qa_list_icon">A</div>
+                                <p>
+                                    A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="qa_list_item">
@@ -331,10 +337,12 @@
                             </div>
                         </div>
                         <div class="qa_list_answer">
-                            <div class="qa_list_icon">A</div>
-                            <p>
-                                A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
-                            </p>
+                            <div class="d-flex">
+                                <div class="qa_list_icon">A</div>
+                                <p>
+                                    A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="qa_list_item">
@@ -357,10 +365,12 @@
                             </div>
                         </div>
                         <div class="qa_list_answer">
-                            <div class="qa_list_icon">A</div>
-                            <p>
-                                A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
-                            </p>
+                            <div class="d-flex">
+                                <div class="qa_list_icon">A</div>
+                                <p>
+                                    A door lock actuator is an electronic device that operates power locks in a car's doors. The device, usually a solenoid or reversible motor, controls the locking and unlocking of vehicles at the touch of a button.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -472,12 +482,20 @@
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/swiper/swiper-bundle.min.js"></script>
     <script src="../js/aos/aos.js"></script>
-    <script src="../js/common.js?v=20240608"></script>
+    <script src="../js/common.js?v=20240614"></script>
 
     <script>
         $(".qa_list_question").click(function(){
-            $(this).parents(".qa_list_item").find(".qa_list_answer").slideToggle(300).css("display","flex");
-            $(this).parents(".qa_list_item").toggleClass("active");
+            if($(this).parents(".qa_list_item").hasClass("active")) {
+                $(this).parents(".qa_list_item").find(".qa_list_answer").slideUp(300);
+                $(this).parents(".qa_list_item").removeClass("active");
+
+            }else {
+                $(this).parents(".qa_list_item").find(".qa_list_answer").slideDown(300);
+                $(this).parents(".qa_list_item").addClass("active");
+                $(this).parents(".qa_list_item").siblings(".qa_list_item").find(".qa_list_answer").slideUp(300);
+                $(this).parents(".qa_list_item").siblings(".qa_list_item").removeClass("active");
+            }
         })
     </script>
 
