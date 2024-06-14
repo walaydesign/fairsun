@@ -211,6 +211,10 @@ main {
   color: #fff;
 }
 
+.header_nav_second-product {
+  min-width: 230px;
+}
+
 .header_nav a {
   font-size: 18px;
   -webkit-transition: 0.3s;

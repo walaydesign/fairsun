@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/aos/aos.css">
-    <link rel="stylesheet" href="../css/style.css?v=20240614">
+    <link rel="stylesheet" href="../css/style.css?v=202406142">
 </head>
 <body>
     <header class="header d-flex align-items-center justify-content-between">
@@ -61,7 +61,7 @@
                 <ul class="header_nav_first d-lg-flex">
                     <li class="drop">
                         <a class="header_nav_firstLink" data-link="./product.html">PRODUCTS</a>
-                        <div class="header_nav_second">
+                        <div class="header_nav_second header_nav_second-product">
                             <ul>
                                 <li class="d-lg-none"><a href="./product.html">ALL</a></li>
                                 <li><a href="./product-2nd.html">PASSENGER CAR</a></li>
@@ -88,6 +88,7 @@
                             <ul>
                                 <li><a href="./about.html">ABOUT</a></li>
                                 <li><a href="./history.html">HISTORY</a></li>
+                                <li><a href="./advantage.html">ADVANTAGE</a></li>
                             </ul>
                         </div>
                     </li>
@@ -800,7 +801,12 @@
         })
 
         function searchBarTop() {
-            let bannerHeight = $(".banner").height() - 120;
+            let bannerHeight;
+            if($(window).width() <= 1600) {
+                bannerHeight = $(".banner").height() - $(window).width()*0.08 - 80;
+            }else {
+                bannerHeight = $(".banner").height() - (($(".banner").height() - 479) / 2) - 80;
+            }
             if($(window).width() > 991) {
                 if($(window).scrollTop()>bannerHeight){
                     $(".search-wrap").addClass("search-top");
